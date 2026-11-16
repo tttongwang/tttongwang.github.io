@@ -1,3 +1,11 @@
+// Keep the public site URL clean when opened from a ChatGPT-shared link.
+const currentUrl = new URL(window.location.href);
+const referringSource = currentUrl.searchParams.get('utm_source');
+if (referringSource && referringSource.toLowerCase() === 'chatgpt.com') {
+  currentUrl.searchParams.delete('utm_source');
+  window.history.replaceState(window.history.state, '', `${currentUrl.pathname}${currentUrl.search}${currentUrl.hash}`);
+}
+
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
 
