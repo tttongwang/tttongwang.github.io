@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=4" />
   <script src="script.js?v=2" defer></script>
 </head>
 <body>
@@ -22,7 +22,7 @@
     <div class="wrap header-inner">
       <a class="wordmark" href="#top" aria-label="Tong Wang — home"><span class="wordmark-seal">TW<span>.</span></span><span>Tong Wang <small>/ Ph.D.</small></span></a>
       <button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
-      <nav class="main-nav" id="primary-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#rare-diseases">Rare diseases</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#software">Software</a><a href="#experience">Experience</a><a href="#service">Service</a><a href="#contact" class="contact-nav">Contact <span aria-hidden="true">→</span></a></nav>
+      <nav class="main-nav" id="primary-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#rare-diseases">Rare diseases</a><a href="#research">Research</a><a href="#future-plan">Roadmap</a><a href="#publications">Publications</a><a href="#software">Software</a><a href="#experience">Experience</a><a href="#service">Service</a><a href="#contact" class="contact-nav">Contact <span aria-hidden="true">→</span></a></nav>
     </div>
   </header>
 
@@ -96,6 +96,31 @@
           <article class="research-item"><span class="research-index">02 / APPLICATION</span><div><h3>More feasible clinical trials for rare diseases</h3><p>Rare-disease studies face small eligible populations, uneven recruitment, and difficult design trade-offs. I am exploring adaptive recruitment strategies and decision methods that may help researchers use limited trial resources more effectively while maintaining rigorous evaluation of safety and efficacy.</p><div class="chips"><span>Rare diseases</span><span>Patient recruitment</span><span>Adaptive decisions</span></div><span class="status-note"><span aria-hidden="true"></span> Ongoing independent research</span></div></article>
           <article class="research-item"><span class="research-index">03 / TRANSLATION</span><div><h3>Practical trial design and open methods</h3><p>My broader interests include dose-response modeling, Bayesian approaches, simulations, and the translation of statistical research into reproducible tools. I am interested in methods that can be understood, tested, and used by researchers beyond a single study or institution.</p><div class="chips"><span>Dose finding</span><span>Simulation</span><span>Open software</span></div></div></article>
         </div>
+      </div>
+    </div></section>
+
+    <section class="section roadmap-section" id="future-plan" aria-labelledby="roadmap-title"><div class="wrap section-grid">
+      <div class="section-side"><span class="section-num">02<span class="rare-side-letter">a</span></span><span class="section-name">FUTURE PLAN</span></div>
+      <div class="section-content">
+        <p class="roadmap-eyebrow">2027–2028 · INDEPENDENT RESEARCH</p>
+        <h2 id="roadmap-title">A research plan with measurable steps<span class="period">.</span></h2>
+        <p class="section-preface roadmap-intro">The near-term priority is a manuscript <strong>under development</strong> on reinforcement learning (RL) for patient recruitment in rare-disease trials. In parallel, I plan to extend my published work on randomized multi-armed bandits (rMAB) and investigate how adaptive decisions affect the reliability of small-population trials. The milestones below are <em>planned targets, not completed work</em>.</p>
+
+        <div class="roadmap-workstreams" aria-label="Three connected research projects">
+          <article class="roadmap-workstream roadmap-priority"><div class="roadmap-workstream-top"><span>01 / NEAR-TERM PRIORITY</span><span class="roadmap-tag">Manuscript in development</span></div><h3>RL for patient recruitment</h3><p>Model sequential choices about which sites to support, how to allocate recruitment effort, and when to activate additional sites. Compare learned policies against fixed allocations and simple rule-based decisions, measuring time to enrollment target, completion probability, and resource use.</p><p class="roadmap-evidence"><strong>Evidence:</strong> Public trial-level characteristics from <a href="https://clinicaltrials.gov/data-api/api" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov</a> and <a href="https://aact.ctti-clinicaltrials.org/landing" target="_blank" rel="noopener noreferrer">AACT</a>, combined with clearly documented simulated site-level recruitment. Registry data alone do not provide monthly site accrual or true site costs.</p></article>
+          <article class="roadmap-workstream"><div class="roadmap-workstream-top"><span>02 / METHODOLOGICAL FOUNDATION</span></div><h3>rMAB inference beyond one stage</h3><p>Extend the existing rMAB framework to settings with multiple adaptations or delayed outcomes. Evaluate estimation bias, confidence-interval coverage, Type I error, and regret against nonadaptive and standard bandit benchmarks.</p><p class="roadmap-evidence"><strong>Starting point:</strong> <a href="https://doi.org/10.1002/sam.11681" target="_blank" rel="noopener noreferrer">Published rMAB methodology</a> and the <a href="https://github.com/tttongwang/rMAB-2026" target="_blank" rel="noopener noreferrer">open Python implementation</a>.</p></article>
+          <article class="roadmap-workstream"><div class="roadmap-workstream-top"><span>03 / NEXT APPLICATION</span><span class="roadmap-tag roadmap-tag-muted">Exploratory</span></div><h3>RL for adaptive trial decisions</h3><p>Build a transparent two- or three-arm rare-disease trial simulation with delayed efficacy and safety observations. Compare fixed randomization, conventional response-adaptive allocation, and RL policies; report power, false-positive error, bias, allocation balance, and safety outcomes before advocating any design.</p><p class="roadmap-evidence"><strong>Starting point:</strong> Publicly described trial designs and prespecified, synthetic patient-level response scenarios.</p></article>
+        </div>
+
+        <div class="roadmap-milestones-heading"><h3>Milestones &amp; deliverables</h3><span>Sequenced targets · subject to feasibility</span></div>
+        <div class="roadmap-milestones">
+          <article class="roadmap-milestone"><div class="roadmap-date"><span>01</span><strong>Q1 2027</strong></div><div><h4>Define scenarios and establish benchmarks</h4><p>Extract rare-disease trial characteristics from public registries; specify heterogeneous site recruitment and realistic constraints. Reproduce the current rMAB simulation baseline and predefine evaluation metrics.</p><div class="roadmap-output"><span>DELIVER</span> Data dictionary and assumptions log · fixed/rule-based recruitment baselines · reproducible simulation protocol</div></div></article>
+          <article class="roadmap-milestone"><div class="roadmap-date"><span>02</span><strong>Q2–Q3 2027</strong></div><div><h4>Test and write up the recruitment policy</h4><p>Train an RL policy and compare it across simulated site heterogeneity, recruitment delays, changing budgets, and uncertain accrual. Document where it helps—and where it fails—relative to simpler strategies.</p><div class="roadmap-output"><span>DELIVER</span> Versioned Python benchmark and reproducible figures · technical report · full draft of the recruitment manuscript</div></div></article>
+          <article class="roadmap-milestone"><div class="roadmap-date"><span>03</span><strong>Q4 2027–Q1 2028</strong></div><div><h4>Evaluate inference and trial-design extensions</h4><p>Study multistage/delayed-response rMAB inference, then run a limited two- or three-arm adaptive trial case study. Require a favorable operating-characteristics assessment before moving beyond simulation.</p><div class="roadmap-output"><span>DELIVER</span> Bias, coverage, Type I error, power, and safety comparisons · open simulation code · methods manuscript outline</div></div></article>
+          <article class="roadmap-milestone"><div class="roadmap-date"><span>04</span><strong>Q2–Q4 2028</strong></div><div><h4>Invite critique, revise, and disseminate</h4><p>Seek methodological feedback, explore academic collaborations, refine reproducible materials, and target journal submissions or relevant scientific meetings as results warrant.</p><div class="roadmap-output"><span>DELIVER</span> Publicly documented code releases and tutorials · manuscript submission targets · conference abstract if results are mature</div></div></article>
+        </div>
+
+        <div class="roadmap-collaboration"><div><span class="roadmap-caption">POTENTIAL ACADEMIC OUTREACH</span><h3>People to learn and collaborate with</h3></div><div><p>Possible conversations include <strong>Dr. Yuexiao Dong (Temple University)</strong> on adaptive inference and <strong>Prof. Ying Yuan (MD Anderson Cancer Center)</strong> on adaptive early-phase trial design and dose optimization. These are exploratory interests drawn from my prior research plan; <strong>no collaboration or endorsement is implied</strong>.</p><p class="roadmap-caveat">This independent work is intended to use public information and simulated data, not confidential sponsor datasets. Simulation results will be labeled as such and will not be presented as clinical validation.</p></div></div>
       </div>
     </div></section>
 
